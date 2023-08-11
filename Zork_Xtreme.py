@@ -16,6 +16,9 @@ sword       = 0
 camera      = 0
 binoculars  = 0
 
+#### Start game
+start = False
+
 #### Starting Position
 start_hor = random.randint(0, 4) # starting hor
 start_ver = random.randint(0, 4) # starting ver
@@ -49,10 +52,12 @@ look_south      = 0
 
 #### The Intro
 print()
-print("<<<                                   \x1B[1mWelcome to Zork Xtreme\x1B[0m                                                    >>>")
-print(f"<<< In this game you have a limited number of moves to escape \x1B[3mThe Beast\x1B[0m. You have {steps} moves to escape.            >>>")
-print("<<< When you're ready to begin type \"start\" and press ENTER.                                                    >>>")
-print("<<< If at any time you don't know what command to use, type \"help\" to print a list of available commands.       >>>")
+print("<<<                                         \x1B[1mWelcome to Zork Xtreme\x1B[0m                                                    >>>")
+print("<<< Welcome to Zork Xtreme, the aim of the game is to escape before you are caught. Explore the map as best you can,  >>>")
+print("<<< you may find some interesting things along the way. Some will prove more useful than others.                      >>>")
+print(f"<<< In this game you have a limited number of moves. You have {steps} moves to escape.                                     >>>")
+print("<<< When you're ready to begin type \"start\" and press ENTER.                                                          >>>")
+print("<<< If at any time you don't know what command to use, type \"help\" to print a list of available commands.             >>>")
 
 print()
 
