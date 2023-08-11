@@ -192,8 +192,8 @@ while steps != 1:
        if hor == 3 and ver == 1:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou come across a small shed which has fallen into disrepair, the door is just about attached to the hinges.\nA dark object crosses the window as you hear the clatter of something heavy falling on the floor.")
+              print("\x1B[1mAfter a moment things settle down again, looking around outside the shadow is nowhere to be seen,\nmaybe it's still inside...")
               print()
               print()
         
@@ -329,6 +329,15 @@ while steps != 1:
               print()
               print()
 
+       # Buildings
+       if hor == 10 and ver == 10:
+
+              print()
+              print("\x1B[1m")
+              print("\x1B[1m")
+              print()
+              print()
+
 
 
        print("What would you like to do? ")
@@ -377,7 +386,18 @@ while steps != 1:
               steps -= 1
               print(hor, ", ", ver)
 
+       # Moving in / out of Buildings
+       # Shed at 3, 1
+       elif user_input == "enter shed" and hor == 3 and ver == 1:
+              hor = 10
+              ver = 10
+
+       elif user_input == "exit shed" and hor == 10 and ver == 10:
+              hor = 3
+              ver = 1
+
         # Inspect
+        # Brick
        elif user_input == "inspect brick" and hor == 0 and ver == 1:
               lb += 1
               print("==============================")
@@ -391,6 +411,7 @@ while steps != 1:
 
 
        # Pick up Items
+       # Gun
        elif user_input == "pick up gun" and gun == 1:
               print()
               print("===========================================================================")
@@ -399,7 +420,7 @@ while steps != 1:
               print("===========================================================================")
               print()
 
-       elif user_input == "pick up gun":
+       elif user_input == "pick up gun" and hor == 10 and ver == 10:
               gun += 1
               print()
               print("===========================================================================")
@@ -408,6 +429,7 @@ while steps != 1:
               print("===========================================================================")
               print()
 
+       # Sword
        elif user_input == "pick up sword" and sword == 1:
               print()
               print("===========================================================================")
@@ -425,6 +447,7 @@ while steps != 1:
               print("===========================================================================")
               print()
 
+       # Camera
        elif user_input == "pick up camera" and camera == 1:
               print()
               print("===========================================================================")
@@ -442,6 +465,7 @@ while steps != 1:
               print("===========================================================================")
               print()
 
+       # Binoculars
        elif user_input == "pick up binoculars" and binoculars == 1:
               print()
               print("===========================================================================")
@@ -460,6 +484,7 @@ while steps != 1:
               print()
 
        # Use Item
+       # Binoculars
        elif user_input == "use binoculars" and hor == 4 and ver == 4:
 
               print()
