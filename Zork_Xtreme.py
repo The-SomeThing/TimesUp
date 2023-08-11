@@ -192,7 +192,7 @@ while steps != 1:
        if hor == 3 and ver == 1:
                
               print()
-              print("\x1B[1mYou come across a small shed which has fallen into disrepair, the door is just about attached to the hinges.\nA dark object crosses the window as you hear the clatter of something heavy falling on the floor.")
+              print("\x1B[1mYou come across a small shed which has fallen into disrepair, the door is just about attached to the hinges.\nA dark figure crosses the window as you hear the clatter of something heavy falling on the floor.")
               print("\x1B[1mAfter a moment things settle down again, looking around outside the shadow is nowhere to be seen,\nmaybe it's still inside...")
               print()
               print()
