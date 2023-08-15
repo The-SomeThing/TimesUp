@@ -335,11 +335,13 @@ while steps != 1:
               print()
 
        # Buildings
+       # Rusty Shed at 3, 1
        if hor == 10 and ver == 10:
 
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou pull the door on the shed open, the creak of the hinges makes your spine buckle.\nYou're unable to walk, you lose.")
+              print()
+              print("\x1B[1mJust kidding. There's a work bench with some orange-looking tools and a broken chair.\nIn the corner there is a cabinet with a gun stood in it.\nWhatever you saw moving in the window isn't here either.")
               print()
               print()
 
@@ -349,25 +351,25 @@ while steps != 1:
        user_input = input("> ").lower().strip()
 
         # Boarder Control
-       if user_input == "move north" and ver == max_ver:
+       if user_input == "move north" and ver >= 10 or user_input == "move south" and ver >= 10:
+              print()
+              print("You're inside.")
+              print("Horizontal: ", hor, "Vertical: ", ver)
+              print()
+
+       elif user_input == "move west" and hor >= 10 or user_input == "move east" and hor >= 10:
+              print()
+              print("You're inside.")
+              print("Horizontal: ", hor, "Vertical: ", ver)
+              print()
+
+       elif user_input == "move north" and ver == max_ver or user_input == "move south" and ver == min_ver:
               print()
               print("A giant wall stands in your way.")
               print("Horizontal: ", hor, "Vertical: ", ver)
               print()
 
-       elif user_input == "move west" and hor == min_hor:
-              print()
-              print("A giant wall stands in your way.")
-              print("Horizontal: ", hor, "Vertical: ", ver)
-              print()
-
-       elif user_input == "move east" and hor == max_hor:
-              print()
-              print("A giant wall stands in your way.")
-              print("Horizontal: ", hor, "Vertical: ", ver)
-              print()
-
-       elif user_input == "move south" and ver == min_ver:
+       elif user_input == "move west" and hor == min_hor or user_input == "move east" and hor == max_hor:
               print()
               print("A giant wall stands in your way.")
               print("Horizontal: ", hor, "Vertical: ", ver)
