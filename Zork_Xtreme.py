@@ -129,7 +129,7 @@ while steps != 1:
               print()
               print()
         
-       if hor == 1 and ver == 0:
+       elif hor == 1 and ver == 0:
                
               print()
               print("\x1B[1mThe fog is thinner here, you can see the path winding through the trees to the west and to the east.")
@@ -137,32 +137,32 @@ while steps != 1:
               print()
               print()
 
-       if hor == 2 and ver == 0:
+       elif hor == 2 and ver == 0:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mA stone path leads north and west, to the east the trees start to disopate and\nit looks as though there may be a clearing.")
+              print("\x1B[1mIt's eerily quiet.")
               print()
               print()
 
-       if hor == 3 and ver == 0:
+       elif hor == 3 and ver == 0:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mThere are fewer trees here but the fog remains thick.")
+              print("\x1B[1mTo the east you make out some small organised objects but its hard to make out\nwhat they are from here.")
               print()
               print()
 
-       if hor == 4 and ver == 0:
+       elif hor == 4 and ver == 0:
               
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou come to a small black fence surrounding a grave yard, it's well questionably\nmaintained considering the state of everything else.")
+              print("\x1B[1mWestward there stands nothing but a few lone trees. The forest is easy to see to\nthe north.")
               print()
               print()
         
         # Row One (1)
-       if hor == 0 and ver == 1 and lb == 1:
+       elif hor == 0 and ver == 1 and lb == 1:
               
               print()
               print("\x1B[1mYou're surrounded by dense trees and shrubbery, you decide to hold close to the western wall so you\ndon't get lost.")
@@ -170,7 +170,7 @@ while steps != 1:
               print()
               print()
                
-       if hor == 0 and ver == 1 and lb != 1:
+       elif hor == 0 and ver == 1 and lb != 1:
                
               print()
               print("\x1B[1mYou're surrounded by dense trees and shrubbery, you decide to hold close to the western wall so you\ndon't get lost.")
@@ -178,23 +178,23 @@ while steps != 1:
               print()
               print()
         
-       if hor == 1 and ver == 1:
+       elif hor == 1 and ver == 1:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou manage to fumble through the shrubbery, it's  miracle you didn't cut yourself.\nThere is a small mound of overturned earth in front of you and a neatly placed rock on top.")
+              print("\x1B[1mFrom here you can hardly see in any other direction.")
               print()
               print()
 
-       if hor == 2 and ver == 1:
+       elif hor == 2 and ver == 1:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mTo the east you see a small wooden structure lead up to by the small path you're\nstood on. The path also heads south towards a forest.")
+              print("\x1B[1mThe west looks like a hellscape of jungle. At least it looks less boring than\nthe north where there's nothing but trees as far as you can see.")
               print()
               print()
 
-       if hor == 3 and ver == 1:
+       elif hor == 3 and ver == 1:
                
               print()
               print("\x1B[1mYou come across a small shed which has fallen into disrepair, the door is just about attached to the hinges.\nA dark figure crosses the window as you hear the clatter of something heavy falling on the floor.")
@@ -202,16 +202,16 @@ while steps != 1:
               print()
               print()
         
-       if hor == 4 and ver == 1:
+       elif hor == 4 and ver == 1:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mLike the other half of the map there's nothing here but a large collection of\nboring old trees. Might be worth looking up once in a while.")
+              print("\x1B[1mTo the west you can see a small shed, south there's a short fence  guarding\nsome stones. North there's... don't make me say it again.\n\n\nFine, it's trees.")
               print()
               print()
         
         # Row Two (2)
-       if hor == 0 and ver == 2:
+       elif hor == 0 and ver == 2:
                
               print()
               print("\x1B[1m")
@@ -219,7 +219,7 @@ while steps != 1:
               print()
               print()
         
-       if hor == 1 and ver == 2:
+       elif hor == 1 and ver == 2:
                
               print()
               print("\x1B[1m")
@@ -227,7 +227,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 2 and ver == 2:
+       elif hor == 2 and ver == 2:
                
               print()
               print("\x1B[1m")
@@ -235,7 +235,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 3 and ver == 2:
+       elif hor == 3 and ver == 2:
                
               print()
               print("\x1B[1m")
@@ -243,7 +243,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 4 and ver == 2:
+       elif hor == 4 and ver == 2:
                
               print()
               print()
@@ -253,7 +253,7 @@ while steps != 1:
               print()
 
         # Row Three (3)
-       if hor == 0 and ver == 3:
+       elif hor == 0 and ver == 3:
                
               print()
               print("\x1B[1m")
@@ -261,7 +261,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 1 and ver == 3:
+       elif hor == 1 and ver == 3:
                
               print()
               print("\x1B[1m")
@@ -269,7 +269,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 2 and ver == 3:
+       elif hor == 2 and ver == 3:
                
               print()
               print("\x1B[1m")
@@ -277,7 +277,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 3 and ver == 3:
+       elif hor == 3 and ver == 3:
                
               print()
               print("\x1B[1m")
@@ -285,7 +285,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 4 and ver == 3:
+       elif hor == 4 and ver == 3:
                
               print()
               print("\x1B[1m")
@@ -294,7 +294,7 @@ while steps != 1:
               print()
 
         #Row Four (4)
-       if hor == 0 and ver == 4:
+       elif hor == 0 and ver == 4:
                
               print()
               print("\x1B[1m")
@@ -302,7 +302,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 1 and ver == 4:
+       elif hor == 1 and ver == 4:
                
               print()
               print("\x1B[1m")
@@ -310,7 +310,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 2 and ver == 4:
+       elif hor == 2 and ver == 4:
                
               print()
               print("\x1B[1m")
@@ -318,7 +318,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 3 and ver == 4:
+       elif hor == 3 and ver == 4:
                
               print()
               print("\x1B[1m")
@@ -326,7 +326,7 @@ while steps != 1:
               print()
               print()
 
-       if hor == 4 and ver == 4:
+       elif hor == 4 and ver == 4:
                
               print()
               print("\x1B[1mThere's a clearning in the forrest and the wall here is broken through but climing it looks deadly\nbased on the steep drop.")
@@ -336,7 +336,7 @@ while steps != 1:
 
        # Buildings
        # Rusty Shed at 3, 1
-       if hor == 10 and ver == 10:
+       elif hor == 10 and ver == 10:
 
               print()
               print("\x1B[1mYou pull the door on the shed open, the creak of the hinges makes your spine buckle.\nYou're unable to walk, you lose.")
