@@ -498,8 +498,6 @@ while steps != 0:
               print("What rock?")
               print()
 
-       
-
 
        # Pick up Items
        # Gun
