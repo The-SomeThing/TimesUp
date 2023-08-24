@@ -37,8 +37,9 @@ min_ver = 0
 max_hor = 4
 max_ver = 4
 
-#### Loose Brick
+#### Tile modifiers
 lb = 0
+alices_rock = 0
 
 #### User Path
 move_north      = 0
@@ -118,7 +119,7 @@ while start == False:
 
 #### User inputs
 
-while steps != 1:
+while steps != 0:
         # Map Layout
         # Row Zero (0)
        if hor == 0 and ver == 0:
@@ -129,7 +130,7 @@ while steps != 1:
               print()
               print()
         
-       elif hor == 1 and ver == 0:
+       if hor == 1 and ver == 0:
                
               print()
               print("\x1B[1mThe fog is thinner here, you can see the path winding through the trees to the west and to the east.")
@@ -137,7 +138,7 @@ while steps != 1:
               print()
               print()
 
-       elif hor == 2 and ver == 0:
+       if hor == 2 and ver == 0:
                
               print()
               print("\x1B[1mA stone path leads north and west, to the east the trees start to disopate and\nit looks as though there may be a clearing.")
@@ -145,7 +146,7 @@ while steps != 1:
               print()
               print()
 
-       elif hor == 3 and ver == 0:
+       if hor == 3 and ver == 0:
                
               print()
               print("\x1B[1mThere are fewer trees here but the fog remains thick.")
@@ -153,32 +154,38 @@ while steps != 1:
               print()
               print()
 
-       elif hor == 4 and ver == 0:
+       if hor == 4 and ver == 0:
               
               print()
-              print("\x1B[1mYou come to a small black fence surrounding a grave yard, it's well questionably\nmaintained considering the state of everything else.")
+              print("\x1B[1mYou come to a small black fence surrounding a graveyard, it's well questionably\nmaintained considering the state of everything else.")
               print("\x1B[1mWestward there stands nothing but a few lone trees. The forest is easy to see to\nthe north.")
               print()
               print()
         
         # Row One (1)
-       elif hor == 0 and ver == 1 and lb == 1:
+       if hor == 0 and ver == 1 and lb == 1:
               
               print()
-              print("\x1B[1mYou're surrounded by dense trees and shrubbery, you decide to hold close to the western wall so you\ndon't get lost.")
+              print("\x1B[1mYou're surrounded by dense trees and shrubbery, you decide to hold close to the\nwestern wall so you don't get lost.")
               print("\x1B[1mYou stub your toe on the brick you dropped on the floor. -1 to run away.")
               print()
               print()
                
-       elif hor == 0 and ver == 1 and lb != 1:
+       if hor == 0 and ver == 1 and lb != 1:
                
               print()
-              print("\x1B[1mYou're surrounded by dense trees and shrubbery, you decide to hold close to the western wall so you\ndon't get lost.")
-              print("\x1B[1mAs you run your hand over the bricks to keep your way you notice one of the bricks is loose from\nthe wall.")
+              print("\x1B[1mYou're surrounded by dense trees and shrubbery, you decide to hold close to the\nwestern wall so you don't get lost.")
+              print("\x1B[1mAs you run your hand over the bricks to keep your way you notice one of the bricks\nis loose from the wall.")
               print()
               print()
-        
-       elif hor == 1 and ver == 1:
+       
+       if hor == 1 and ver == 1 and alices_rock == 1:
+              print()
+              print("\x1B[1mYou almost fall trying to climb through the bushes but you find your footing.")
+              print("\x1B[1mThe rock lays there next to the pitch black tunnel.")
+              print()
+              print()
+       if hor == 1 and ver == 1 and alices_rock != 1:
                
               print()
               print("\x1B[1mYou manage to fumble through the shrubbery, it's  miracle you didn't cut yourself.\nThere is a small mound of overturned earth in front of you and a neatly placed rock on top.")
@@ -186,7 +193,7 @@ while steps != 1:
               print()
               print()
 
-       elif hor == 2 and ver == 1:
+       if hor == 2 and ver == 1:
                
               print()
               print("\x1B[1mTo the east you see a small wooden structure lead up to by the small path you're\nstood on. The path also heads south towards a forest.")
@@ -194,7 +201,7 @@ while steps != 1:
               print()
               print()
 
-       elif hor == 3 and ver == 1:
+       if hor == 3 and ver == 1:
                
               print()
               print("\x1B[1mYou come across a small shed which has fallen into disrepair, the door is just about attached to the hinges.\nA dark figure crosses the window as you hear the clatter of something heavy falling on the floor.")
@@ -202,131 +209,131 @@ while steps != 1:
               print()
               print()
         
-       elif hor == 4 and ver == 1:
+       if hor == 4 and ver == 1:
                
               print()
               print("\x1B[1mLike the other half of the map there's nothing here but a large collection of\nboring old trees. Might be worth looking up once in a while.")
-              print("\x1B[1mTo the west you can see a small shed, south there's a short fence  guarding\nsome stones. North there's... don't make me say it again.\n\n\nFine, it's trees.")
+              print("\x1B[1mTo the west you can see a small shed, south there's a short fence guarding\nsome stones. North there's... don't make me say it again.\n\n\nFine, it's trees.")
               print()
               print()
         
         # Row Two (2)
-       elif hor == 0 and ver == 2:
+       if hor == 0 and ver == 2:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mStanding here makes you feel strange, the air is thick and hard to breath, you\ncan hardly see your face in front of you, tread lightly.")
+              print("\x1B[1mThe wall is your friend here, the only thing to be seen is the never ending forrest.")
               print()
               print()
         
-       elif hor == 1 and ver == 2:
+       if hor == 1 and ver == 2:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mStanding amongst the dense trees there's nothing interesting around, although\nlooking to the south looks especially treacherous.")
+              print("\x1B[1mIt's lonely out here, maybe you should have brought a book or something.")
               print()
               print()
 
-       elif hor == 2 and ver == 2:
+       if hor == 2 and ver == 2:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mIn every direction is a constellation of pines, the only sanctuary seem to be\nto the south where there's a stone path.")
+              print("\x1B[1mLeaning against the tree you hear birds in the trees chirping as if everything\nis okay with the world.")
               print()
               print()
 
-       elif hor == 3 and ver == 2:
+       if hor == 3 and ver == 2:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mTo the south you can make out some kind of building and someone standing outside.")
+              print("\x1B[1mThe guy might kill you but at least it's more interesting than all these damn trees.")
               print()
               print()
 
-       elif hor == 4 and ver == 2:
+       if hor == 4 and ver == 2:
                
               print()
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou can see the northen wall from here surprisingly, the trees have thinned\nout some and there's not so much fog either.")
+              print("\x1B[1mDon't you ever wonder why this wall is so damn big? What are they trying to\nkeep out? Or are they keeping something in...")
               print()
               print()
 
         # Row Three (3)
-       elif hor == 0 and ver == 3:
+       if hor == 0 and ver == 3:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mIf it weren't for this damned wall you'd be lost amongst the never-ending\ngreenery. There's nothing to be seen and nowhere to go it seems.")
+              print("\x1B[1mYou notice one of the trees is odly lone standing, it's bark looks as\nthough something has been scratched into it.")
               print()
               print()
 
-       elif hor == 1 and ver == 3:
+       if hor == 1 and ver == 3:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mNothin' but trees in every direction, if only you had the map that\nthe dev had, this would be much easier probably.")
+              print("\x1B[1mCopy this into your browser for a map. https://youtu.be/dQw4w9WgXcQ?si=EWgh74hfzno3DquO")
               print()
               print()
 
-       elif hor == 2 and ver == 3:
+       if hor == 2 and ver == 3:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou're surrounded by the forrest, no matter which way you look your\noptions look limited.")
+              print("\x1B[1mAt least the sound of the wildlife takes the edge off.")
               print()
               print()
 
-       elif hor == 3 and ver == 3:
+       if hor == 3 and ver == 3:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mThe woods look endless, no matter which way you turn it looks like\nyou'll be met with more of these looming trees.")
+              print("\x1B[1mIt's hard to tell the time of day being as foggy as it is but one\nthing is for certain; the birds are not sleeping.")
               print()
               print()
 
-       elif hor == 4 and ver == 3:
+       if hor == 4 and ver == 3:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mNorthward you see a gaping hole in the wall but can't make anything out from here.")
+              print("\x1B[1mA cool breeze sends chills down your spine.")
               print()
               print()
 
         #Row Four (4)
-       elif hor == 0 and ver == 4:
+       if hor == 0 and ver == 4:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mThe northern wall meets the west, there's nothing here except for\nmore trees and piles of leaves on the floor.")
+              print("\x1B[1mIt smells like burning but there's not a fire in sight.")
               print()
               print()
 
-       elif hor == 1 and ver == 4:
+       if hor == 1 and ver == 4:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mYou can hear some drums in the distance, are you hallucinating?\nOther than this great wall there's nothing to be seen through the dense fog.")
+              print("\x1B[1mIf only you had some water to rehydrate.")
               print()
               print()
 
-       elif hor == 2 and ver == 4:
+       if hor == 2 and ver == 4:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mStanding here it's hard to believe just how many trees there are.")
+              print("\x1B[1mDid you know a jazz musician named Teri Pall invented a version of the cordless phone in 1965 but could not market her invention, as its 2-mile (3.2 km) range caused its radio signals to interfere with aircraft communications. In 1968, she sold her rights to the cordless phone to a manufacturer who modified it for practical use.")
               print()
               print()
 
-       elif hor == 3 and ver == 4:
+       if hor == 3 and ver == 4:
                
               print()
-              print("\x1B[1m")
-              print("\x1B[1m")
+              print("\x1B[1mTo the east there's a clearing and some true daylight, something\nlooks strange along the northern wall.")
+              print("\x1B[1mThe birds perched on the tress high above are singing, but not in\nthe disney kind of way, more like they're plotting something.")
               print()
               print()
 
-       elif hor == 4 and ver == 4:
+       if hor == 4 and ver == 4:
                
               print()
               print("\x1B[1mThere's a clearning in the forrest and the wall here is broken through but climing it looks deadly\nbased on the steep drop.")
@@ -336,12 +343,22 @@ while steps != 1:
 
        # Buildings
        # Rusty Shed at 3, 1
-       elif hor == 10 and ver == 10:
+       if hor == 10 and ver == 10:
 
               print()
               print("\x1B[1mYou pull the door on the shed open, the creak of the hinges makes your spine buckle.\nYou're unable to walk, you lose.")
               print()
               print("\x1B[1mJust kidding. There's a work bench with some orange-looking tools and a broken chair.\nIn the corner there is a cabinet with a gun stood in it.\nWhatever you saw moving in the window isn't here either.")
+              print()
+              print()
+
+       if hor == 11 and ver == 11:
+
+              print()
+              print("\x1B[1mYou meet Alice, she's sat awkwardly at a table with the mad hatter.")
+              print("\x1B[1mThe man in the hat gives you some bizzare advice.")
+              print()
+              print("\x1B[3mNo weapon will save you from this fight but the beast hates light.")
               print()
               print()
 
@@ -393,27 +410,94 @@ while steps != 1:
               steps -= 1
               print(hor, ", ", ver)
 
-       # Moving in / out of Buildings
-       # Shed at 3, 1
+       # Moving in / out of Buildings / areas
+       # Shed (3, 1)
        elif user_input == "enter shed" and hor == 3 and ver == 1:
               hor = 10
               ver = 10
+       elif user_input == "enter shed":
+              print()
+              print("What shed?")
+              print()
 
        elif user_input == "exit shed" and hor == 10 and ver == 10:
               hor = 3
               ver = 1
+       elif user_input == "exit shed":
+              print()
+              print("You're not in a shed.")
+              print()
+
+       # Alice in Wonderland (1, 1)
+       elif user_input == "enter tunnel" and hor == 1 and ver == 1 and alices_rock >= 1:
+              hor = 11
+              ver = 11
+       elif user_input == "enter tunnel":
+              print()
+              print("What tunnel?")
+              print()
+       
+       elif user_input == "exit tunnel" and hor == 11 and ver == 11:
+              hor = 1
+              ver = 1
+       elif user_input == "exit tunnel":
+              print()
+              print("You're not in a tunnel.")
+              print()
+
+       # Graveyard (4, 0)
+       elif user_input == "enter graveyard" and hor == 4 and ver == 0:
+              hor = 12
+              ver = 12
+       elif user_input == "enter graveyard":
+              print()
+              print("What graveyard?")
+              print()
+
+       elif user_input == "exit graveyard" and hor == 12 and ver == 12:
+              hor = 4
+              ver = 0
+       elif user_input == "exit graveyard":
+              print()
+              print("You're not in a graveyard.")
+              print()
 
         # Inspect
         # Brick
        elif user_input == "inspect brick" and hor == 0 and ver == 1:
               lb += 1
-              print("==============================")
-              print("\x1B[1mDon't look back.")
-              print("\x1B[1mIt will only catch you faster.")
-              print("==============================")
+              print("===================================================================")
+              print("\x1B[1mDon't look at the tower.")
+              print("\x1B[1mIf it sees the whites of your eyes you'll be lucky to escape.")
+              print("===================================================================")
               print()
        elif user_input == "inspect brick":
+              print()
               print("What brick?")
+              print()
+
+       elif user_input == "inspect tree" and hor == 0 and ver == 3:
+              print()
+              print("=====")
+              print(steps)
+              print("=====")
+              print()
+       elif user_input == "inspect tree":
+              print()
+              print("What tree?")
+              print()
+
+       elif user_input == "inspect rock" and hor == 1 and ver == 1:
+              alices_rock = 1
+              print()
+              print("\x1B[1mYou lift up the rock to uncover a tunnel, there's no light almost as if\nit were a black hole sucking in all the light.")
+              print("\x1B[1mThe sound of the forest subsides and you can hear the faint laugh of a\ngirl coming from the tunnel.")
+              print()
+       elif user_input == "inspect rock":
+              print()
+              print("What rock?")
+              print()
+
        
 
 
