@@ -745,7 +745,7 @@ while steps != 0:
        elif user_input == "beam me up" and hor == end_hor and ver == end_ver:
               print()
               print()
-              print("\x1B[1mPicard welcomes you onto the Startship Enterprise, he tells you\nyour escape was lucky and that the creature which lives within the\nwalls is near impossible to kill with what resources you had available to you.")
+              print("\x1B[1mKirk welcomes you onto the Startship Enterprise, he tells you\nyour escape was lucky and that the creature which lives within the\nwalls is near impossible to kill with what resources you had available to you.")
               print("\x1B[1mYou're safe now, but your dreams are not.")
               print()
               print("\x1B[3mYou have escaped it.")
