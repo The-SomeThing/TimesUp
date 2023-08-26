@@ -262,7 +262,7 @@ while steps != 0:
        if hor == 2 and ver == 2:
                
               print()
-              print("\x1B[1mIn every direction is a constellation of pines, the only sanctuary seem to be\nto the south where there's a stone path.\x1B[0m")
+              print("\x1B[1mIn every direction is a constellation of pines, the only sanctuary seems to be\nto the south where there's a stone path.\x1B[0m")
               print("\x1B[1mLeaning against the tree you hear birds in the trees chirping as if everything\nis okay with the world.\x1B[0m")
               print()
               print()
@@ -373,7 +373,7 @@ while steps != 0:
               print()
               print("\x1B[1mYou pull the door on the shed open, the creak of the hinges makes your spine buckle.\nYou're unable to walk, you lose.\x1B[0m")
               print("\x1B[1mJust kidding. There's a work bench with some orange-looking tools and a chair with three\nlegs.\x1B[0m")
-              print("\x1B[1mWhatever you saw moving in the window isn't here either.\x1B[0m")
+              print("\x1B[1mWhatever you saw moving in the window isn't here though.\x1B[0m")
               print("\x1B[1mIn the corner of the room there is a cabinet with a gun, a sword, a camera and a pair\nof binoculars.\x1B[0m")
               print()
               print()
@@ -514,12 +514,8 @@ while steps != 0:
               lb += 1
               print("===================================================================")
               print("\x1B[1mDon't look at the tower.\x1B[0m")
-              print("\x1B[1mIf it sees the whites of your eyes you'll be lucky to escape.\x1B[0m")
+              print("\x1B[1mIf it sees the whites of your eyes, you'll be lucky to escape.\x1B[0m")
               print("===================================================================")
-              print()
-       elif user_input == "inspect brick":
-              print()
-              print("What brick?")
               print()
 
        elif user_input == "inspect tree" and hor == 0 and ver == 3:
@@ -528,20 +524,12 @@ while steps != 0:
               print(steps)
               print("=====")
               print()
-       elif user_input == "inspect tree":
-              print()
-              print("What tree?")
-              print()
 
        elif user_input == "inspect rock" and hor == 1 and ver == 1:
               alices_rock = 1
               print()
               print("\x1B[1mYou lift up the rock to uncover a tunnel, there's no light almost as if\nit were a black hole sucking in all the light.\x1B[0m")
               print("\x1B[1mThe sound of the forest subsides and you can hear the faint laugh of a\ngirl coming from the tunnel.\x1B[0m")
-              print()
-       elif user_input == "inspect rock":
-              print()
-              print("What rock?")
               print()
 
        elif user_input == "inspect film strip" and hor == 12 and ver == 12:
@@ -550,9 +538,10 @@ while steps != 0:
               print("\x1B[1mThe second negative is some kind of text, like a menu. There are some\ncircles drawn over it in seemingly random places but it's too hard\nto tell what is trying to be highlighted here.\x1B[0m")
               print("\x1B[1mYou feel deeply troubled looking at the picture. Better get moving.\x1B[0m")
               print()
-       elif user_input == "inspect film strip":
+
+       elif "inspect" in user_input:
               print()
-              print("What film strip?")
+              print("You cannot inspect that.")
               print()
 
 
@@ -562,7 +551,7 @@ while steps != 0:
               print()
               print("===========================================================================")
               print("\x1B[1mYou already have a gun and we don't trust you to have two.\x1B[0m")
-              print("\x1B[3mShouldn't you be trying to get out of here?.\x1B[0m")
+              print("\x1B[3mShouldn't you be trying to get out of here?\x1B[0m")
               print("===========================================================================")
               print()
 
@@ -575,11 +564,6 @@ while steps != 0:
               print("===========================================================================")
               print()
 
-       elif user_input == "pick up gun":
-
-              print()
-              print("What gun?")
-              print()
 
        # Sword
        elif user_input == "pick up sword" and sword == 1:
@@ -597,12 +581,6 @@ while steps != 0:
               print("\x1B[1mYou put the sword over your shoulder.\x1B[0m")
               print("\x1B[3mJust because you have a sword now doesn't make you a swashbuckler.\x1B[0m")
               print("===========================================================================")
-              print()
-
-       elif user_input == "pick up sword":
-
-              print()
-              print("What sword?")
               print()
 
        # Camera
@@ -623,18 +601,12 @@ while steps != 0:
               print("===========================================================================")
               print()
 
-       elif user_input == "pick up camera":
-
-              print()
-              print("What camera?")
-              print()
-
        # Binoculars
        elif user_input == "pick up binoculars" and binoculars == 1:
               print()
               print("===========================================================================")
               print("\x1B[1mYou already have the binoculars.\x1B[0m")
-              print("\x1B[1mYou know you only have one set of eyes right?\x1B[0m")
+              print("\x3B[1mYou know you only have one set of eyes right?\x1B[0m")
               print("===========================================================================")
               print()
 
@@ -643,14 +615,13 @@ while steps != 0:
               print()
               print("===========================================================================")
               print("\x1B[1mYou put the binoculars into your sack.\x1B[0m")
-              print("\x1B[1mGood thing there aren't any windows 'round here.\x1B[0m")
+              print("\x3B[1mGood thing there aren't any windows 'round here.\x1B[0m")
               print("===========================================================================")
               print()
 
-       elif user_input == "pick up binoculars":
-
+       elif "pick up" in user_input:
               print()
-              print("What binoculars?")
+              print("There is nothing to pickup here.")
               print()
 
        #### Use Items
