@@ -38,6 +38,9 @@ max_ver = 4
 lb = 0
 alices_rock = 0
 
+#### Interaction modifier
+film_strip = 0
+
 
 #### The Intro
 print()
@@ -100,7 +103,6 @@ while start == False:
               print()
 
 
-
        else:
         print()
         print("<<< Too scared? No one blames you. Come back when you're ready.                                           >>>")
@@ -116,7 +118,7 @@ while steps != 0:
        if steps == 5:
               print()
               print("\x1B[1mSuddenly you feel tesne, there's a presence you can't quite name but\nyou know it's there.\x1B[0m")
-              print("\x1B[1mYou hear a slow beat like the sounds of drums in the distance.\x1B[0m")
+              print("\x1B[1mYou hear a slow beat like the sound of drums in the distance.\x1B[0m")
               print()
 
        elif steps == 4:
@@ -213,7 +215,7 @@ while steps != 0:
        if hor == 1 and ver == 1 and alices_rock != 1:
                
               print()
-              print("\x1B[1mYou manage to fumble through the shrubbery, it's  miracle you didn't cut yourself.\nThere is a small mound of overturned earth in front of you and a neatly placed rock on top.\x1B[0m")
+              print("\x1B[1mYou manage to fumble through the shrubbery, it's miracle you didn't cut yourself.\nThere is a small mound of overturned earth in front of you and a neatly placed rock on top.\x1B[0m")
               print("\x1B[1mFrom here you can hardly see in any other direction.\x1B[0m")
               print()
               print()
@@ -263,7 +265,7 @@ while steps != 0:
                
               print()
               print("\x1B[1mIn every direction is a constellation of pines, the only sanctuary seems to be\nto the south where there's a stone path.\x1B[0m")
-              print("\x1B[1mLeaning against the tree you hear birds in the trees chirping as if everything\nis okay with the world.\x1B[0m")
+              print("\x1B[1mLeaning against the tree you hear birds up above, chirping as if everything is okay\nwith the world.\x1B[0m")
               print()
               print()
 
@@ -279,7 +281,7 @@ while steps != 0:
                
               print()
               print()
-              print("\x1B[1mYou can see the northen wall from here surprisingly, the trees have thinned\nout some and there's not so much fog either.\x1B[0m")
+              print("\x1B[1mYou can see the northern wall from here surprisingly, the trees have thinned\nout some and there's not so much fog either.\x1B[0m")
               print("\x1B[1mDon't you ever wonder why this wall is so damn big? What are they trying to\nkeep out? Or are they keeping something in...\x1B[0m")
               print()
               print()
@@ -296,7 +298,7 @@ while steps != 0:
        if hor == 1 and ver == 3:
                
               print()
-              print("\x1B[1mNothin' but trees in every direction, if only you had the map that\nthe dev had, this would be much easier probably.\x1B[0m")
+              print("\x1B[1mNothin' but trees in every direction, if only you had the map that the dev had, this\nwould be much easier, probably.\x1B[0m")
               print("\x1B[1mCopy this into your browser for a map. https://youtu.be/dQw4w9WgXcQ?si=EWgh74hfzno3DquO \x1B[0m")
               print()
               print()
@@ -409,7 +411,7 @@ while steps != 0:
               print("\x1B[1mA low monotonous hum grows louder in your ear, the fog around you clears but it stays\ndark.\x1B[0m")
               print("\x1B[1mA continous gust of wind pushes the trees in every direction away from you.\x1B[0m")
               print()
-              print("\x1B[1mA light beams down from above, a badge on your shit glows dimly.\x1B[0m")
+              print("\x1B[1mA light beams down from above, a badge on your shirt glows dimly.\x1B[0m")
               print()
               print()
 
@@ -454,58 +456,60 @@ while steps != 0:
        elif user_input == "move south":
               ver -= 1
               steps -= 1
-              
 
        # Moving in / out of Buildings / areas
        # Shed (3, 1)
        elif user_input == "enter shed" and hor == 3 and ver == 1:
               hor = 10
               ver = 10
-       elif user_input == "enter shed":
-              print()
-              print("What shed?")
-              print()
 
        elif user_input == "exit shed" and hor == 10 and ver == 10:
               hor = 3
               ver = 1
-       elif user_input == "exit shed":
-              print()
-              print("You're not in a shed.")
-              print()
 
        # Alice in Wonderland (1, 1)
        elif user_input == "enter tunnel" and hor == 1 and ver == 1 and alices_rock >= 1:
               hor = 11
               ver = 11
-       elif user_input == "enter tunnel":
-              print()
-              print("What tunnel?")
-              print()
        
        elif user_input == "exit tunnel" and hor == 11 and ver == 11:
               hor = 1
               ver = 1
-       elif user_input == "exit tunnel":
-              print()
-              print("You're not in a tunnel.")
-              print()
 
        # Graveyard (4, 0)
        elif user_input == "enter graveyard" and hor == 4 and ver == 0:
               hor = 12
               ver = 12
-       elif user_input == "enter graveyard":
-              print()
-              print("What graveyard?")
-              print()
 
        elif user_input == "exit graveyard" and hor == 12 and ver == 12:
               hor = 4
               ver = 0
-       elif user_input == "exit graveyard":
+
+       elif "enter" in user_input:
               print()
-              print("You're not in a graveyard.")
+              print("You cannot enter anything here.")
+              print()
+
+       elif "exit" in user_input:
+              print()
+              print("You're not inside.")
+              print()
+
+       # Climbing
+       elif "climb" in user_input and hor == 4 and ver == 4:
+              print()
+              print("\x1B[1mYou climb up the short wall, standing awkwardly on the broken bricks.\nIt's a nice view up hear and the air has cleared.\x1B[0m")
+              print("\x1B[1mYou close your eyes to take a much needed deep breath but suddenly you lose your footing...\x1B[0m")
+              print()
+              print()
+              print("\x1B[1mYou have met your untimely death due to stupidity, I did try to warn you.\x1B[0m")
+              print()
+              print("\x1B[1mYOU LOSE\x1B[0m")
+              exit()
+
+       elif "climb" in user_input:
+              print()
+              print("You cannot climb here.")
               print()
 
         # Inspect
@@ -520,9 +524,9 @@ while steps != 0:
 
        elif user_input == "inspect tree" and hor == 0 and ver == 3:
               print()
-              print("=====")
-              print(steps)
-              print("=====")
+              print("\x1B[1m======\x1B[0m")
+              print(" ", steps)
+              print("\x1B[1m======\x1B[0m")
               print()
 
        elif user_input == "inspect rock" and hor == 1 and ver == 1:
@@ -534,7 +538,7 @@ while steps != 0:
 
        elif user_input == "inspect film strip" and hor == 12 and ver == 12:
               print()
-              print("\x1B[1mYou pick up the negatives, it's hard to tell if the thing you see is\n what you think it is or if it's just blood. Either way you're not\nlooking forward to finding out.\x1B[0m")
+              print("\x1B[1mYou pick up the negatives, it's hard to tell if the thing you see is\nwhat you think it is or if it's just blood. Either way you're not\nlooking forward to finding out.\x1B[0m")
               print("\x1B[1mThe second negative is some kind of text, like a menu. There are some\ncircles drawn over it in seemingly random places but it's too hard\nto tell what is trying to be highlighted here.\x1B[0m")
               print("\x1B[1mYou feel deeply troubled looking at the picture. Better get moving.\x1B[0m")
               print()
@@ -606,7 +610,7 @@ while steps != 0:
               print()
               print("===========================================================================")
               print("\x1B[1mYou already have the binoculars.\x1B[0m")
-              print("\x3B[1mYou know you only have one set of eyes right?\x1B[0m")
+              print("\x1B[3mYou know you only have one set of eyes right?\x1B[0m")
               print("===========================================================================")
               print()
 
@@ -615,13 +619,18 @@ while steps != 0:
               print()
               print("===========================================================================")
               print("\x1B[1mYou put the binoculars into your sack.\x1B[0m")
-              print("\x3B[1mGood thing there aren't any windows 'round here.\x1B[0m")
+              print("\x1B[3mGood thing there aren't any windows 'round here.\x1B[0m")
               print("===========================================================================")
               print()
 
        elif "pick up" in user_input:
               print()
               print("There is nothing to pickup here.")
+              print()
+
+       elif "look up" in user_input:
+              print()
+              print("Nothing to see but fog and the looming trees overhead.")
               print()
 
        #### Use Items
@@ -721,8 +730,8 @@ while steps != 0:
               print()
               exit()
 
-        # Help Menu
-       elif user_input == "help":
+        # Help Menu + film strip
+       elif user_input == "help" and film_strip >= 1:
               print("\x1B[1m==============================================================================================\x1B[0m")
               print("                                            \x1B[1mHELP\x1B[0m")
               print("\x1B[1m==============================================================================================\x1B[0m")
@@ -751,6 +760,46 @@ while steps != 0:
               print()
               print()
               print("When you're ready to escape enter the secret phrase in the right location to join up with Capt. J.L.P.")
+              print()
+              print()
+              print("To quit the game at any time enter \"quit\"")
+              print()
+              print()
+              print("\x1B[1m==============================================================================================\x1B[0m")
+              print("\x1B[1m==============================================================================================\x1B[0m")
+              print()
+              print()
+
+       # Help Menu w/ film strip
+       elif user_input == "help":
+              print("\x1B[1m==============================================================================================\x1B[0m")
+              print("                                            \x1B[1mHELP\x1B[0m")
+              print("\x1B[1m==============================================================================================\x1B[0m")
+              print()
+              print("\x1B[1m======================================== How to move: ========================================\x1B[0m")
+              print("To navigate the map use the command \"move\" followed by a direction on the compass.")
+              print("Example, \"move north\" will move you north one step. You may only make one step at a time.")
+              print()
+              print()
+              print("While you explore you may come across some buildings. To enter them use the \"enter\" command.")
+              print("Example: \"enter house\"")
+              print("Use the \"exit\" [building] to leave them.")
+              print("Example: \"exit house\"")
+              print()
+              print()
+              print("\x1B[1m====================================== Useful Commands ======================================\x1B[0m")
+              print()
+              print("When you come across an item on the map, to pick it up enter \"pick up\" [item].")
+              print()
+              print()
+              print("To inspect something use the command \"inspect\" [item].")
+              print()
+              print()
+              print("During the game you might have some items which can come in useful.")
+              print("Use the commmand \"use\" [item].")
+              print()
+              print()
+              print("When you're ready to escape enter the secret phrase in the right location to join up with\nAdmiral J.T.K.")
               print()
               print()
               print("To quit the game at any time enter \"quit\"")
