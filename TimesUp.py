@@ -5,7 +5,7 @@
 import random
 
 #### Beginning steps
-steps = random.randint(75, 125)
+steps = random.randint(25, 75)
 
 #### User inventory
 gun         = 0
