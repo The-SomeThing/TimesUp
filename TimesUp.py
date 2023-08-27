@@ -515,7 +515,7 @@ while steps != 0:
         # Inspect
         # Brick
        elif user_input == "inspect brick" and hor == 0 and ver == 1:
-              lb += 1
+              lb = 1
               print("===================================================================")
               print("\x1B[1mDon't look at the tower.\x1B[0m")
               print("\x1B[1mIf it sees the whites of your eyes, you'll be lucky to escape.\x1B[0m")
@@ -537,6 +537,7 @@ while steps != 0:
               print()
 
        elif user_input == "inspect film strip" and hor == 12 and ver == 12:
+              film_strip = 1
               print()
               print("\x1B[1mYou pick up the negatives, it's hard to tell if the thing you see is\nwhat you think it is or if it's just blood. Either way you're not\nlooking forward to finding out.\x1B[0m")
               print("\x1B[1mThe second negative is some kind of text, like a menu. There are some\ncircles drawn over it in seemingly random places but it's too hard\nto tell what is trying to be highlighted here.\x1B[0m")
