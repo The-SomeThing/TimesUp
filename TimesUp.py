@@ -1,4 +1,4 @@
-#### Time's Up - the fastest version of Zork you'll ever play
+#### Time's Up - the fastest (and weirdest) version of Zork you'll ever play
 #### SomeThing
 
 #### RNGesus has entered the chat
