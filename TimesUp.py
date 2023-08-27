@@ -363,7 +363,7 @@ while steps != 0:
        if hor == 4 and ver == 4:
                
               print()
-              print("\x1B[1mThere's a clearning in the forrest and the wall here is broken through but climing it looks deadly\nbased on the steep drop.\x1B[0m")
+              print("\x1B[1mThere's a clearning in the forrest and the wall here is broken through but climbing it looks deadly\nbased on the steep drop.\x1B[0m")
               print("\x1B[1mYou make out a faint object in the distance, if only you had something to get a better look.\x1B[0m")
               print()
               print()
