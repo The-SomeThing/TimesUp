@@ -442,19 +442,19 @@ while steps != 0:
        elif user_input == "move north":
               ver += 1
               steps -= 1
-              print(hor, ", ", ver)
+              
        elif user_input == "move west":
               hor -= 1
               steps -= 1
-              print(hor, ", ", ver)
+              
        elif user_input == "move east":
               hor += 1
               steps -= 1
-              print(hor, ", ", ver)
+              
        elif user_input == "move south":
               ver -= 1
               steps -= 1
-              print(hor, ", ", ver)
+              
 
        # Moving in / out of Buildings / areas
        # Shed (3, 1)
@@ -764,9 +764,9 @@ while steps != 0:
        # Quit game
        elif user_input == "quit":
               print()
-              print("==============================")
+              print("\x1B[1m==============================\x1B[0m")
               print("That's the cowards way out.")
-              print("==============================")
+              print("\x1B[1m==============================\x1B[0m")
               print()
               exit()
        
